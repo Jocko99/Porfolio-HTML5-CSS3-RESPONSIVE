@@ -1,0 +1,434 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+@import url('https://fonts.googleapis.com/css?family=Signika');
+@import url('https://fonts.googleapis.com/css?family=Montez');
+$font1:'Signika', sans-serif;
+$font2:'Montez', cursive;
+$boja:#A8B7B2;
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: $font1;
+}
+span{
+    font-weight: bold;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration:none;
+    color:#000;
+}
+.cistac{
+    clear: both;
+}
+#omotac{
+    width: 1200px;
+    margin: 0px auto;
+}
+#zaglavlje{
+    width:100%;
+    height:75px;
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:2;
+    background-color:$boja;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    #logo{
+        font-family: $font2;
+        text-align: center;
+        font-size:25px;
+    }
+    #nav{
+        #btnMeni {
+            text-align: center;
+            display: none;
+            padding: 20px 0px;
+            font-size: 25px;
+            background-color: $boja;
+            }
+        ul{
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        li{
+            padding: 10px;
+            font-size: 20px;    
+        }
+}
+}
+#slajder{
+    background-image: url('../img/slajder.jpg');
+    width:100%;
+    height: 95vh;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    #tekst{
+        position: absolute;
+        visibility: hidden;
+    }
+}
+.blok{
+    width: 100%;
+    height: 4vh;
+    background-color:	#C4CDBF;
+}
+.s{
+    margin-top:45px;
+}
+.omot{
+    width: 1200px;
+    margin: 0px auto;
+    .sadrzaj{
+        margin:30px auto;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        h2{
+            width:40%;
+            font-size:30px;
+            text-align: center;
+        }
+        .linija {
+            width: 30%;
+            border-bottom: 2px solid #000;
+        }
+    }
+    #blokSajt{
+        width:600px;
+        margin: 0px auto;
+        text-align: center;
+        h2,h3,h4,p{
+            padding:5px;
+        }
+        #sajt{
+            width:502px;
+            margin:0px auto;
+            padding: 3px;
+            img{
+                border-radius: 13px;
+                &:hover{
+                    box-shadow: 2px 2px 2px #252525;
+                }
+            }
+            
+            }
+        }
+        #skills{
+            width:960px;
+            margin: 0px auto;
+            img{
+                border-radius: 13px;
+            }
+        }
+        #skola{
+            width:70%;
+            float:left;
+            font-size: 26px;
+            h3,p{
+                padding-top:10px;
+            }
+        }
+        #knjiga{
+            width:30%;
+            float: right;
+            img{
+                float: right;
+            }
+        }
+        #autor{
+            width:100%;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            #autorSlika{
+                padding: 50px;
+                img{
+                    border:9px solid $boja;
+                    border-radius: 10px;
+                }
+            }
+            #autorPodaci{
+                p{
+                font-size:22px;
+                padding-top:20px;
+                }
+
+            }
+        }
+        #forma{
+            width:70%;
+            text-align: center;
+            border-top:2px solid $boja;
+            border-bottom:2px solid $boja;
+            margin:10px auto;
+            padding: 20px;
+            .sirina{
+                width:50%;
+                border:2px solid $boja;
+                border-radius:5px;
+                padding: 10px;
+                margin:10px 0px;
+            }
+            #pointer{cursor:pointer;}
+        }  
+}
+#footer{
+    width:100%;
+    height:100px;
+    background-color:$boja;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    p{
+        font-size:24px;
+    }
+}    
+/*Media-queries*/
+@media screen and (max-width:1200px){
+    .omot{
+        width:100%;
+    }
+}
+@media screen and (max-width:1040px){
+    #slajder{
+        background-position:80% 40%;
+   }
+   .omot{
+       width:90%;
+       #skills{
+        width:70%;
+        display:flex;
+        justify-content: center;
+            img{width:92vh;}
+       }
+   }
+}
+@media screen and (max-width:920px){
+    .omot{
+        width:80%;
+        #skola{
+            width:100%;
+            font-size:20px;
+            text-align:center;
+        }
+        #knjiga{
+            display:none;
+        }
+        #autor{
+            flex-wrap:wrap;
+            #autorSlika{
+                margin:0px auto;
+                padding: 5px;
+            }
+            #autorPodaci{
+                text-align: center;
+            }
+        }
+        #forma{
+            width:100%;
+        }
+    }
+}
+@media screen and (max-width:777px){
+    #zaglavlje{
+        #nav{
+            li{
+                i{  display: flex;
+                    justify-content: center;
+                }
+            }  
+        }
+    }
+}
+@media screen and (max-width:760px){
+    #zaglavlje{
+        #logo{
+            font-size:23px;
+            padding-right:10px;
+        }
+    }
+    #slajder{
+        background-image:url('../img/slajder2.jpg');
+        width:100%;
+        height: 95vh;
+        background-size:cover;
+        background-repeat:no-repeat;
+        #tekst{
+            visibility: visible;
+            font-size:20px;
+        left:30%;
+        top:50%;        }
+     }
+     .omot{
+        width:70%;
+        #skola{
+            font-size:18px;
+            text-align:center;
+        }
+        #autor{
+            #autorPodaci{
+                text-align: center;
+                p{
+                    font-size:18px;
+                }
+            }
+        }
+        
+        #forma{
+            .sirina{width:80%;}
+            }
+    }
+}
+@media screen and (max-width:722px){
+    #slajder{
+        #tekst{
+            left:25%;
+        }
+    }
+    .omot{
+        #blokSajt{
+            width:auto;
+            #sajt{
+                width:auto;
+                img{
+                    height:30vh;
+                }
+            }
+        }
+        #skills{
+            width:60%;
+        
+            img{width:60vh; height:30vh;}
+        }
+        .linija{width:20%;}
+    }
+    #footer{
+        flex-direction: column;
+        height:auto;
+        p{
+            padding: 5px;
+        }
+    }
+} 
+@media screen and (max-width:666px){
+    #zaglavlje{
+        height: auto;
+        flex-direction: column;
+        #nav{
+            ul{
+                display: none;
+            }
+            #btnMeni{
+                width:100%;
+                display:block;
+            }
+            &:hover ul{display:block;}
+            li{
+                display:flex;
+                justify-content: center;
+            }      
+        }
+    }
+}   
+@media screen and (max-width:650px){
+    #slajder{
+        #tekst{
+            left:20%;
+        }
+    }
+    #Projekti,#Vestine,#Obrazovanje,#Podaci{
+        h2{
+            font-size:24px;
+        }
+    }
+}    
+@media screen and (max-width:600px){
+    #slajder{
+        #tekst{
+            left:15%;
+        }
+    }
+    
+}
+@media screen and (max-width:480px){
+    #slajder{
+        #tekst{
+            left:10%;
+        }
+    }
+    .omot{
+        #blokSajt{
+            #sajt{
+                img{
+                    height:20vh;
+                }
+            }
+        }
+        #skills{
+            width:auto;
+        
+            img{ width:40vh; height:30vh}
+        }
+    #Projekti,#Vestine,#Obrazovanje,#Podaci{
+        h2{font-size:20px;}
+    }
+    #blokSajt,#skola{
+        font-size:15px;
+    }
+    #autor{
+        #autorSlika{
+            width:auto;
+            img{height:40vh;}
+        }
+        #autorPodaci{
+            p{font-size:15px;}
+        }
+    }   
+    }
+} 
+@media screen and (max-width:450px){
+    #slajder{
+        #tekst{
+            left:3%;
+        }
+    }
+    .omot{
+        #Projekti,#Vestine,#Obrazovanje,#Podaci{
+            h2{font-size:17px;}
+        }
+        #forma{
+            margin:0px auto;
+            margin-bottom:5px;
+        }
+    }
+}
+@media screen and (max-width:400px){
+    #slajder{
+        #tekst{
+            left:2%;
+        }
+    }
+    #footer{
+        p{
+            font-size:20px;
+        }
+    }
+}
+@media screen and (max-width:361px){
+    #slajder{
+        #tekst{
+            left:0%;
+            font-size:19px;
+        }
+    }
+}
