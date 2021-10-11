@@ -2,8 +2,9 @@
 My second static web site for college needs
 <hr/>
 1.Static site
+<br/>
 2.Technologies used: 
--HTML5,
--CSS3,
--Responsive design,
+-HTML5,<br/>
+-CSS3,<br/>
+-Responsive design,<br/>
 -SCSS
